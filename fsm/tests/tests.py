@@ -1,5 +1,5 @@
 from fsm.graph_vis.graph_visualization import visualize_fsm
-from fsm.run.fsm_check import fsm_accepts, is_determined
+from fsm.run.fsm_check import fsm_check_word, is_determined
 from fsm.tests.fsms import fsm_1, fsm_2
 
 if __name__ == '__main__':
@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     # Проверка строки с помощью автомата
     input_string_1 = "aaab"
-    result = fsm_accepts(fsm_1, input_string_1)
+    result = fsm_check_word(fsm_1, input_string_1)
     print(f"Input string '{input_string_1}' for FSM_1 is : {result}")
 
     # Пример FSM_2 (букв "b" не больше трех)
@@ -24,5 +24,5 @@ if __name__ == '__main__':
 
     # Проверка строки с помощью автомата
     input_string_2 = "abbbbbbaaaaa"
-    result = fsm_accepts(fsm_2, input_string_2)
+    result = fsm_check_word(fsm_2, input_string_2)
     print(f"Input string '{input_string_2}' for FSM_2 is : {result}")

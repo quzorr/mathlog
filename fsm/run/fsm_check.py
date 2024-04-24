@@ -1,4 +1,4 @@
-def fsm_accepts(fsm: dict, input_str: str) -> bool:
+def fsm_check_word(fsm: dict, input_str: str) -> bool:
     current_state = fsm['start']
 
     for symbol in input_str:
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     print(f'FSM_1 is determined?: {is_determined(fsm_1)}')
 
     input_string_1 = "aab"
-    result = fsm_accepts(fsm_1, input_string_1)
+    result = fsm_check_word(fsm_1, input_string_1)
     print(f"Input string '{input_string_1}' for FSM_1 is : {result}")
 
     # Пример FSM_2 (букв "b" не больше трех)
@@ -62,5 +62,5 @@ if __name__ == '__main__':
     print(f'FSM_2 is determined?: {is_determined(fsm_2)}')
 
     input_string_2 = "abbbbbbaaaaa"
-    result = fsm_accepts(fsm_2, input_string_2)
+    result = fsm_check_word(fsm_2, input_string_2)
     print(f"Input string '{input_string_2}' for FSM_2 is : {result}")
