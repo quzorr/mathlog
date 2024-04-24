@@ -23,6 +23,10 @@ def is_correct(fsm: dict) -> bool:
     pass
 
 
+def determine(fsm: dict) -> dict:
+    pass
+
+
 if __name__ == '__main__':
     # Пример FSM_1 (букв "a" четное число)
     fsm_1 = {

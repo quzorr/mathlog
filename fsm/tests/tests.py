@@ -1,5 +1,5 @@
 from fsm.graph_vis.graph_visualization import visualize_fsm
-from fsm.run.fsm_check_word import fsm_accepts, is_determined
+from fsm.run.fsm_check import fsm_accepts, is_determined
 from fsm.tests.fsms import fsm_1, fsm_2
 
 if __name__ == '__main__':
